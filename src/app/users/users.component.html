@@ -17,20 +17,20 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let country of usersData">
-        <td>{{ country.id }}</td>
-        <td>{{ country.name }}</td>
-        <td>{{ country.username }}</td>
-        <td>{{ country.email }}</td>
-        <td>{{ country.address.street }}</td>
-        <td>{{ country.address.suite }}</td>
-        <td>{{ country.address.city }}</td>
-        <td>{{ country.address.zipcode }}</td>
-        <td>{{ country.address.geo.lat }}</td>
-        <td>{{ country.address.geo.lng }}</td>
-        <td>{{ country.phone }}</td>
-        <td>{{ country.website }}</td>
-        <td>{{ country.company.name }}</td>
+      <tr *ngFor="let user of usersData">
+        <td>{{ user.id }}</td>
+        <td>{{ user.name }}</td>
+        <td>{{ user.username }}</td>
+        <td>{{ user.email }}</td>
+        <td>{{ user.address.street }}</td>
+        <td>{{ user.address.suite }}</td>
+        <td>{{ user.address.city }}</td>
+        <td>{{ user.address.zipcode }}</td>
+        <td>{{ user.address.geo.lat }}</td>
+        <td>{{ user.address.geo.lng }}</td>
+        <td>{{ user.phone }}</td>
+        <td>{{ user.website }}</td>
+        <td>{{ user.company.name }}</td>
       </tr>
     </tbody>
   </table>

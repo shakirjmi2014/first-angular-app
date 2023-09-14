@@ -1,36 +1,38 @@
 <ng-container *ngIf="countriesData">
-  <table class="table table-striped">
-    <thead>
-      <tr>
-        <th>Common Name</th>
-        <th>Official Name</th>
-        <th>Native Official Name</th>
-        <th>Native Common Name</th>
-        <th>Capital</th>
-        <th>Region</th>
-        <th>Sub-Region</th>
-        <th>Currency Name</th>
-        <th>Currency Symbol</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let country of countriesData">
-        <td>{{ country.name.common }}</td>
-        <td>{{ country.name.official }}</td>
-        <td>
-          <tr *ngFor="let native of country.name.nativeName">
-            <td>{{ native.official }}</td>
-            <td>{{ native.common }}</td>
-          </tr>
-        </td>
-        <td>{{ country.capital }}</td>
-        <td>{{ country.region }}</td>
-        <td>{{ country.subregion }}</td>
-        <td>{{ country.currencies.Obj.name }}</td>
-        <td>{{ country.currencies.NPR.symbol }}</td>
-      </tr>
-    </tbody>
-  </table>
+  <div id="myGrid" style="height: 150px; width: 600px" class="ag-theme-balham">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Common Name</th>
+          <th>Official Name</th>
+          <th>Native Official Name</th>
+          <th>Native Common Name</th>
+          <th>Capital</th>
+          <th>Region</th>
+          <th>Sub-Region</th>
+          <th>Currency Name</th>
+          <th>Currency Symbol</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let country of countriesData">
+          <td>{{ country.name.common }}</td>
+          <td>{{ country.name.official }}</td>
+          <td>
+            <tr *ngFor="let native of country.name.nativeName">
+              <td>{{ native.official }}</td>
+              <td>{{ native.common }}</td>
+            </tr>
+          </td>
+          <td>{{ country.capital }}</td>
+          <td>{{ country.region }}</td>
+          <td>{{ country.subregion }}</td>
+          <td>{{ country.currencies.Obj.name }}</td>
+          <td>{{ country.currencies.NPR.symbol }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </ng-container>
 <ng-container *ngIf="errorMessage">
   <h3>
